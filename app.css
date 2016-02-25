@@ -59,7 +59,22 @@ body {
 }
 
 .elem {
-  font: 48px Raleway, Roboto, Arial, sans-serif;
+  position: relative;
+  padding: 24px;
+}
+
+.elem .key {
+  font: 48px Raleway, Arial, sans-serif;
+  color: #3D3D3D;
+  text-align: center;
+}
+
+.elem .numb {
+  position: absolute;
+  right: 1%;
+  bottom: 1%;
+  font: 24px: Roboto, Helvetica, sans-serif;
+  color: #3D3D3D;
 }
 
 .answbox {

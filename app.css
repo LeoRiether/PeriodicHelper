@@ -13,6 +13,7 @@ html {
 body {
   display: flex;
   flex-flow: column;
+  min-height: 100%;
 }
 
 .header {

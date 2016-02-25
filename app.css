@@ -87,3 +87,7 @@ body {
   color: #F0F0F0;
   background: #3D3D3D;
 }
+
+.answbtn:hover {
+  background: #3F3F3F;
+}

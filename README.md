@@ -1,2 +1,2 @@
-# Tabela-Periodica
-Aprenda a tabela periódica em pouco tempo!
+# Periodic Helper
+### Learn the periodic table in no time!

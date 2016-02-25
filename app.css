@@ -1,0 +1,41 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway|Roboto);
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  min-height: 100%;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-flow: columns;
+}
+
+.header {
+  text-align: center;
+  padding: 24px;
+}
+
+.title {
+  font: 36px Raleway, Roboto, Arial, sans-serif; 
+  color: #3D3D3D;
+}
+
+.subtitle {
+  font: 24px Raleway, Roboto, Arial, sans-serif;
+  color: #636363;
+}
+
+.main {
+  flex: 1;
+  text-align: center;
+}
+
+.footer {
+  background: #E5E5E5;
+  padding: 24px;
+}

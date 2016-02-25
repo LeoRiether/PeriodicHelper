@@ -63,6 +63,7 @@ body {
 }
 
 .answbox {
+  display: inline-block;
   border: thin solid #3D3D3D;
   padding: 0;
 }

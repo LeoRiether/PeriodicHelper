@@ -12,7 +12,7 @@ html {
 
 body {
   display: flex;
-  flex-flow: columns;
+  flex-flow: column;
 }
 
 .header {

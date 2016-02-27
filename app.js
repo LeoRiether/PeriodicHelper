@@ -14,7 +14,7 @@ var
   msgbox = q('#msgbox'),
   msg = q('#msgbox .msg'),
   past = [0,0,0,0,0],
-  lc = true
+  lc = false
 ;
 
 function validate(){

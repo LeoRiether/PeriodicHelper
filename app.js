@@ -40,8 +40,10 @@ q('#msgbox .close').addEventListener("click", function (){
 
 answbtn.addEventListener("click", validate);
 answtxt.addEventListener("keyup", function (e){
-  if(e.which == 13) // Enter
-    validate();
+  if(e.which == 13) { // Enter
+    if(msgbox.className == "") { validate(); }
+    else { msgbox.className = "";next(); }
+  }  
 })
 
 next();

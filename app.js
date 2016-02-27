@@ -26,6 +26,7 @@ function validate(){
 }
 
 function next() {
+  answtxt.value = "";
   eidx = Math.floor(Math.random()*Elements.length);
   ekey.innerHTML = Elements[eidx].Key;
   enumb.innerHTML = eidx;
@@ -37,7 +38,7 @@ q('#msgbox .close').addEventListener("click", function (){
 });
 
 answbtn.addEventListener("click", validate);
-answtext.addEventListener("keyup", function (e){
+answtxt.addEventListener("keyup", function (e){
   if(e.which == 13) // Enter
     validate();
 })

@@ -13,7 +13,8 @@ html {
 body {
   display: -ms-flexbox;
   display: flex;
-  flex-flow: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   min-height: 100%;
 }
 
@@ -139,4 +140,8 @@ body {
 
 .answbtn:hover {
   background: #275133;
+}
+
+@media screen and (max-width: 640px) {
+  
 }

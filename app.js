@@ -34,7 +34,7 @@ function next() {
   do {
     eidx = Math.floor(Math.random()*Elements.length);
   } while (past.indexOf(eidx) != -1);
-  if(lc === false) {
+  if(lc === true) {
     past.pop();
     past.unshift(eidx);
   }

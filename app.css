@@ -50,6 +50,9 @@ body {
 }
 
 #msgbox {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   padding: 16px;
   font: 16px Roboto, Helvetica, sans-serif;

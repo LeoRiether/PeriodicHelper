@@ -13,16 +13,19 @@ var
   answbtn = q('.answbtn'),
   msgbox = q('#msgbox'),
   msg = q('#msgbox .msg'),
-  past = [0,0,0,0,0]
+  past = [0,0,0,0,0],
+  lc = false
 ;
 
 function validate(){
   if(answtxt.value.toLowerCase() == Elements[eidx].Name.toLowerCase()) {
     msgbox.className = "ok";
     msg.innerHTML = "Thats correct!";
+    lc = true;
   } else {
     msgbox.className = "bad";
     msg.innerHTML = "Incorrect... The answer was <b>" + Elements[eidx].Name + "</b>";
+    lc = false;
   }
 }
 
@@ -31,8 +34,10 @@ function next() {
   do {
     eidx = Math.floor(Math.random()*Elements.length);
   } while (past.indexOf(eidx) != -1);
-  past.pop();
-  past.unshift(eidx);
+  if(lc === true) {
+    past.pop();
+    past.unshift(eidx);
+  }
   ekey.innerHTML = Elements[eidx].Key;
   enumb.innerHTML = eidx+1;
   elem.style.background = ElemCol[Elements[eidx].Class];

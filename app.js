@@ -43,4 +43,6 @@ answtxt.addEventListener("keyup", function (e){
     validate();
 })
 
+next();
+
 })(window, document)

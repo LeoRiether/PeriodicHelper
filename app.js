@@ -31,12 +31,13 @@ function validate(){
 
 function next() {
   answtxt.value = "";
+  var lasteidx = eidx;
   do {
     eidx = Math.floor(Math.random()*Elements.length);
   } while (past.indexOf(eidx) != -1);
   if(lc === true) {
     past.pop();
-    past.unshift(eidx);
+    past.unshift(lasteidx);
   }
   console.log(past)
   ekey.innerHTML = Elements[eidx].Key;

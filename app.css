@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  display: -ms-flex;
+  display: -ms-flexbox;
   display: flex;
   flex-flow: column;
   min-height: 100%;

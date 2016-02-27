@@ -31,7 +31,6 @@ function validate(){
 
 function next() {
   answtxt.value = "";
-  console.log(lc, past);
   do {
     eidx = Math.floor(Math.random()*Elements.length);
   } while (past.indexOf(eidx) != -1);
@@ -39,6 +38,7 @@ function next() {
     past.pop();
     past.unshift(eidx);
   }
+  console.log(past)
   ekey.innerHTML = Elements[eidx].Key;
   enumb.innerHTML = eidx+1;
   elem.style.background = ElemCol[Elements[eidx].Class];

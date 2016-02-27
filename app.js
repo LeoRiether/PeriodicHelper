@@ -29,20 +29,25 @@ function next() {
   answtxt.value = "";
   eidx = Math.floor(Math.random()*Elements.length);
   ekey.innerHTML = Elements[eidx].Key;
-  enumb.innerHTML = eidx;
+  enumb.innerHTML = eidx+1;
   elem.style.background = ElemCol[Elements[eidx].Class];
 }
 
-q('#msgbox .close').addEventListener("click", function (){
+function pass(){
   msgbox.className = "";
   next();
-});
+}
 
-answbtn.addEventListener("click", validate);
+q('#msgbox .close').addEventListener("click", pass)
+
+answbtn.addEventListener("click", function (){
+  if(msgbox.className == "") validate();
+  else pass();
+});
 answtxt.addEventListener("keyup", function (e){
   if(e.which == 13) { // Enter
-    if(msgbox.className == "") { validate(); }
-    else { msgbox.className = "";next(); }
+    if(msgbox.className == "") validate();
+    else pass();
   }  
 })
 

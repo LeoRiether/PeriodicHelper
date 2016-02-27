@@ -12,7 +12,8 @@ var
   answtxt = q('#answ'),
   answbtn = q('.answbtn'),
   msgbox = q('#msgbox'),
-  msg = q('#msgbox .msg')
+  msg = q('#msgbox .msg'),
+  past = [0,0,0,0,0]
 ;
 
 function validate(){
@@ -27,7 +28,11 @@ function validate(){
 
 function next() {
   answtxt.value = "";
-  eidx = Math.floor(Math.random()*Elements.length);
+  do {
+    eidx = Math.floor(Math.random()*Elements.length);
+  } while (past.indexOf(eidx) == -1);
+  past.pop();
+  past.unshift(eidx);
   ekey.innerHTML = Elements[eidx].Key;
   enumb.innerHTML = eidx+1;
   elem.style.background = ElemCol[Elements[eidx].Class];

@@ -30,7 +30,7 @@ function next() {
   eidx = Math.floor(Math.random()*Elements.length);
   ekey.innerHTML = Elements[eidx].Key;
   enumb.innerHTML = eidx;
-  elem.style.background = ElemCol[Elements[eidx].Class]
+  elem.style.background = ElemCol[Elements[eidx].Class];
 }
 
 q('#msgbox .close').addEventListener("click", function (){

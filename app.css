@@ -83,7 +83,7 @@ body {
 }
 
 .main {
-  -ms-flex: 1;
+  -ms-flexbox: 1;
   flex: 1;
   text-align: center;
 }

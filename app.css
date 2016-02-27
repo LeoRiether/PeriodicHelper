@@ -52,8 +52,9 @@ body {
 }
 
 .ok, .bad {
-  -webkit-transform: none;
-  transform: none;
+  /*Sorry for the importants*/
+  -webkit-transform: none !important;
+  transform: none !important;
 }
 .ok {
   background: rgba(55, 214, 100, .8);

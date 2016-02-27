@@ -1,4 +1,4 @@
-(function (win, doc){
+(function (win, doc, ElemCol){
 'use strict';
 
 var q = doc.querySelector.bind(doc);
@@ -30,6 +30,7 @@ function next() {
   eidx = Math.floor(Math.random()*Elements.length);
   ekey.innerHTML = Elements[eidx].Key;
   enumb.innerHTML = eidx;
+  elem.style.background = ElemCol[Elements[eidx].Class]
 }
 
 q('#msgbox .close').addEventListener("click", function (){
@@ -45,4 +46,6 @@ answtxt.addEventListener("keyup", function (e){
 
 next();
 
-})(window, document)
+})(window, document, {
+  'metal': 'green'
+  })

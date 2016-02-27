@@ -30,7 +30,7 @@ function next() {
   answtxt.value = "";
   do {
     eidx = Math.floor(Math.random()*Elements.length);
-  } while (past.indexOf(eidx) == -1);
+  } while (past.indexOf(eidx) != -1);
   past.pop();
   past.unshift(eidx);
   ekey.innerHTML = Elements[eidx].Key;

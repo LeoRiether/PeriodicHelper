@@ -51,12 +51,12 @@ body {
 
 .ok {
   background: rgba(55, 214, 100, .8);
-  top: 0;
+  top: 0 !important; /*Sorry*/
 }
 
 .bad {
   background: rgba(158, 43, 28, .8);
-  top: 0;
+  top: 0 !important; /*Sorry*/
 }
 
 #msgbox {

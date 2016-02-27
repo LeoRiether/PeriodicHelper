@@ -49,6 +49,16 @@ body {
   color: #636363;
 }
 
+.ok {
+  background: rgba(55, 214, 100, .8);
+  top: 0;
+}
+
+.bad {
+  background: rgba(158, 43, 28, .8);
+  top: 0;
+}
+
 #msgbox {
   position: fixed;
   top: -100%;
@@ -67,16 +77,6 @@ body {
 }
 .close:before {
   content: "&times;";
-}
-
-.ok {
-  background: rgba(55, 214, 100, .8);
-  top: 0;
-}
-
-.bad {
-  background: rgba(158, 43, 28, .8);
-  top: 0;
 }
 
 .main {

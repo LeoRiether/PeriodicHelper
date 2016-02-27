@@ -75,9 +75,6 @@ body {
   float: right;
   cursor: pointer;
 }
-.close:before {
-  content: "&times;";
-}
 
 .main {
   flex: 1;

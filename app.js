@@ -31,6 +31,7 @@ function validate(){
 
 function next() {
   answtxt.value = "";
+  console.log(lc, past)
   do {
     eidx = Math.floor(Math.random()*Elements.length);
   } while (past.indexOf(eidx) != -1);

@@ -51,26 +51,29 @@ body {
   color: #636363;
 }
 
+.ok, .bad {
+  -webkit-transform: none;
+  transform: none;
+}
 .ok {
   background: rgba(55, 214, 100, .8);
-  top: 0 !important; /*Sorry*/
 }
-
 .bad {
   background: rgba(158, 43, 28, .8);
-  top: 0 !important; /*Sorry*/
 }
 
 #msgbox {
   position: fixed;
-  top: -100%;
+  top: 0;
   left: 0;
   z-index: 100;
   width: 100%;
   padding: 16px;
   font: 16px Roboto, Helvetica, sans-serif;
   color: #F0F0F0;
-  transition: top .25s ease;
+  transition: transform .25s ease;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
 }
 
 .close {
@@ -79,6 +82,7 @@ body {
 }
 
 .main {
+  -ms-flex: 1;
   flex: 1;
   text-align: center;
 }
@@ -140,8 +144,4 @@ body {
 
 .answbtn:hover {
   background: #275133;
-}
-
-@media screen and (max-width: 640px) {
-  
 }

@@ -12,7 +12,7 @@ var
   answtxt = q('#answ'),
   answbtn = q('.answbtn'),
   msgbox = q('#msgbox'),
-  msg = q('#msgbox .content')
+  msg = q('#msgbox .msg')
 ;
 
 function validate(){

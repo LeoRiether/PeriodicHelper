@@ -14,7 +14,7 @@ var
   msgbox = q('#msgbox'),
   msg = q('#msgbox .msg'),
   past = [0,0,0,0,0],
-  lc = false
+  lc = true
 ;
 
 function validate(){
@@ -34,7 +34,7 @@ function next() {
   do {
     eidx = Math.floor(Math.random()*Elements.length);
   } while (past.indexOf(eidx) != -1);
-  if(lc === true) {
+  if(lc === false) {
     past.pop();
     past.unshift(eidx);
   }

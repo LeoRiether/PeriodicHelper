@@ -47,5 +47,8 @@ answtxt.addEventListener("keyup", function (e){
 next();
 
 })(window, document, {
-  'metal': 'green'
+  'metal': '#8CE881',
+  'ametal': '#EAEA6B',
+  'hydrogen': '#EA91E1',
+  'noblegas': '#79BBEA'
   })

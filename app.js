@@ -16,7 +16,7 @@ var
 ;
 
 function validate(){
-  if(answtxt.value == Elements[eidx].Name) {
+  if(answtxt.value.toLowerCase() == Elements[eidx].Name.toLowerCase()) {
     msgbox.className = "ok";
     msg.innerHTML = "Thats correct!";
   } else {

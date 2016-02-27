@@ -51,25 +51,32 @@ body {
 
 #msgbox {
   position: fixed;
-  top: 0;
+  top: -100%;
   left: 0;
   z-index: 100;
   width: 100%;
   padding: 16px;
   font: 16px Roboto, Helvetica, sans-serif;
   color: #F0F0F0;
+  transition: top .25s ease;
 }
 
 .close {
   float: right;
+  cursor: pointer;
+}
+.close:before {
+  content: "&times;";
 }
 
 .ok {
   background: rgba(55, 214, 100, .8);
+  top: 0;
 }
 
 .bad {
-  background: rgba(178, 50, 33, .8);
+  background: rgba(158, 43, 28, .8);
+  top: 0;
 }
 
 .main {

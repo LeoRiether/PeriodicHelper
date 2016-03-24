@@ -1,8 +1,6 @@
 (function (doc, $$) {
 'use strict';
 
-console.log('Localizing');
-
 var strings = {
   title: {
     en: 'Periodic Helper',
@@ -31,7 +29,7 @@ var lang = (function () {
   }
 })();
 
-$$('[string]').forEach(function (e) {
+[].forEach.call($$('[string]'), function (e) {
   e.textContent = strings[e.attributes.string][lang];
 });
 

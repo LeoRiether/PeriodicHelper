@@ -1,6 +1,8 @@
 (function (doc, $$) {
 'use strict';
 
+console.log('Localizing');
+
 var strings = {
   title: {
     en: 'Periodic Helper',

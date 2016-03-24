@@ -1,7 +1,7 @@
 (function (doc, $$) {
 'use strict';
 
-var strings = [
+var strings = {
   title: {
     en: 'Periodic Helper',
     pt: 'Tabela Periódica'
@@ -18,7 +18,7 @@ var strings = [
     en: 'This project on github',
     pt: 'Este projeto no github'
   }
-];
+};
 
 var lang = (function () {
   var l = localStorage.getItem('lang');

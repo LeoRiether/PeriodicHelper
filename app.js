@@ -24,9 +24,9 @@ var
 
 var setlang = window.location.hash.match(/setlang=(.*)/);
 if (setlang) {
-  localStorage.setItem('lang', setlang[1]);
+  lang(setlang[1]);
 }
-switch (localStorage.getItem('lang')) {
+switch (lang()) {
   case 'en':
     langsel.selectedIndex = 1;
   case 'pt':
@@ -36,17 +36,17 @@ switch (localStorage.getItem('lang')) {
 }
 langsel.addEventListener('change', function () {
   var l = langsel.options[langsel.selectedIndex].className;
-  localStorage.setItem('lang', l);
+  lang(l);
 });
 
 function validate(){
-  if(answtxt.value.toLowerCase() == Elements[eidx]['Name-'+window.lang].toLowerCase()) {
+  if(answtxt.value.toLowerCase() == Elements[eidx]['Name-'+window.lang()].toLowerCase()) {
     msgbox.className = "ok";
-    msg.innerHTML = msgLocal[window.lang][0];
+    msg.innerHTML = msgLocal[window.lang()][0];
     lc = true;
   } else {
     msgbox.className = "bad";
-    msg.innerHTML = msgLocal[window.lang][1] + Elements[eidx]['Name-'+window.lang] + "</b>";
+    msg.innerHTML = msgLocal[window.lang()][1] + Elements[eidx]['Name-'+window.lang()] + "</b>";
     lc = false;
   }
 }

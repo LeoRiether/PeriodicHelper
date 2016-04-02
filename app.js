@@ -1,6 +1,14 @@
 (function (win, doc, ElemCol){
 'use strict';
 
+window.lang = function (v) {
+  if (v) {
+    localStorage.setItem('lang', v);
+  } else {
+    return localStorage.getItem('lang');
+  }
+} 
+
 var q = doc.querySelector.bind(doc);
 
 var eidx;

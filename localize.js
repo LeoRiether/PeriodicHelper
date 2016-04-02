@@ -24,7 +24,7 @@ var strings = {
   }
 };
 
-window.lang((function () {
+lang((function () {
   var l = lang();
   if (l !== null) { return l; }
   else {
@@ -38,7 +38,8 @@ function localize(){
   });
 }
 
+localize();
 window.localize = localize;
 window.strings = strings;
 
-})(document, document.querySelectorAll.bind(document));
+})(document, document.querySelectorAll.bind(document)).bind(window);

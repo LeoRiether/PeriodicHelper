@@ -6,6 +6,7 @@ var q = doc.querySelector.bind(doc);
 var eidx;
 
 var 
+  langsel = q('.lang-select'),
   elem = q('.elem'),
   ekey = q('.elem .key'),
   enumb = q ('.elem .numb'),
@@ -20,6 +21,24 @@ var
     en: [ 'Thats correct!', 'Incorrect... The answer was <b>' ]
   }
 ;
+
+var setlang = window.location.search.match(/setlang=(.*)/);
+if (setlang) {
+  localStorage.setItem('lang', setlang[1]);
+}
+switch (localStorage.getItem('lang')) {
+  case 'en':
+    langsel.selectedIndex = 1;
+  case 'pt':
+    langsel.selectedIndex = 2;
+  default:
+    langsel.selectedIndex = 0;
+}
+langsel.addEventListener('change', function () {
+  var l = langsel.options[langsel.selectedIndex].text;
+  console.log(l);
+  localStorage.setItem('lang', l);
+});
 
 function validate(){
   if(answtxt.value.toLowerCase() == Elements[eidx]['Name-'+window.lang].toLowerCase()) {

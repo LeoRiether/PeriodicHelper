@@ -24,24 +24,13 @@ var strings = {
   }
 };
 
-window.langtext = '';
-window.lang = function (v) {
-  if (v) {
-    window.langtext = v;
-    localStorage.setItem('lang', v);
-  } else {
-    return window.langtext;
-  }
-} 
-
-window.langtext = (function () {
-  var l = localStorage.getItem('lang');
+window.lang((function () {
+  var l = lang();
   if (l !== null) { return l; }
   else {
-    localStorage.setItem('lang', 'en');
     return 'en';
   }
-})();
+})());
 
 function localize(){
   [].forEach.call($$('[string]'), function (e) {

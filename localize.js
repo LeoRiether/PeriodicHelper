@@ -2,6 +2,10 @@
 'use strict';
 
 var strings = {
+  langtext: {
+    en: 'Language',
+    pt: 'Língua'
+  },
   title: {
     en: 'Periodic Helper',
     pt: 'Tabela Periódica'

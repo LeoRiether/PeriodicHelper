@@ -24,7 +24,17 @@ var strings = {
   }
 };
 
-var lang = (function () {
+window.langtext = '';
+window.lang = function (v) {
+  if (v) {
+    window.langtext = v;
+    localStorage.setItem('lang', v);
+  } else {
+    return window.langtext;
+  }
+} 
+
+window.langtext = (function () {
   var l = localStorage.getItem('lang');
   if (l !== null) { return l; }
   else {
@@ -35,12 +45,11 @@ var lang = (function () {
 
 function localize(){
   [].forEach.call($$('[string]'), function (e) {
-    e.textContent = strings[e.getAttribute('string')][lang];
+    e.textContent = strings[e.getAttribute('string')][lang()];
   });
 }
 
 window.localize = localize;
 window.strings = strings;
-window.lang = lang;
 
 })(document, document.querySelectorAll.bind(document));

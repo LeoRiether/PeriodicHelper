@@ -153,7 +153,6 @@ body {
 }
 
 .lang-select {
-  -webkit-appearance: none;
   float: right;
   background: #fff;
   border: 0;

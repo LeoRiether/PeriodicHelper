@@ -35,8 +35,7 @@ switch (localStorage.getItem('lang')) {
     langsel.selectedIndex = 0;
 }
 langsel.addEventListener('change', function () {
-  var l = langsel.options[langsel.selectedIndex].text;
-  console.log(l);
+  var l = langsel.options[langsel.selectedIndex].className;
   localStorage.setItem('lang', l);
 });
 

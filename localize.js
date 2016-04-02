@@ -33,11 +33,13 @@ var lang = (function () {
   }
 })();
 
-[].forEach.call($$('[string]'), function (e) {
-  console.log(e.getAttribute('string'), lang, strings[e.getAttribute('string')]);
-  e.textContent = strings[e.getAttribute('string')][lang];
-});
+function localize(){
+  [].forEach.call($$('[string]'), function (e) {
+    e.textContent = strings[e.getAttribute('string')][lang];
+  });
+}
 
+window.localize = localize;
 window.strings = strings;
 window.lang = lang;
 

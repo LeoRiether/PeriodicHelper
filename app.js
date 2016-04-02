@@ -45,6 +45,7 @@ switch (lang()) {
 langsel.addEventListener('change', function () {
   var l = langsel.options[langsel.selectedIndex].className;
   lang(l);
+  window.localize();
 });
 
 function validate(){

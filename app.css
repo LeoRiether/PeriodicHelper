@@ -160,10 +160,3 @@ body {
   border-bottom: 2px solid #f0f0f0;
   padding: 4px;
 }
-
-.lang-select:after {
-  border-bottom: thin solid #eee;
-  content: '>';
-  transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-}

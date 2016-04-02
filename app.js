@@ -14,17 +14,21 @@ var
   msgbox = q('#msgbox'),
   msg = q('#msgbox .msg'),
   past = [0,0,0,0,0],
-  lc = false
+  lc = false,
+  msgLocal = {
+    pt: [ 'Resposta correta!', 'Incorreto... A resposta era <b>' ],
+    en: [ 'Thats correct!', 'Incorrect... The answer was <b>' ]
+  }
 ;
 
 function validate(){
   if(answtxt.value.toLowerCase() == Elements[eidx].Name.toLowerCase()) {
     msgbox.className = "ok";
-    msg.innerHTML = "Thats correct!";
+    msg.innerHTML = msgLocal[window.lang][1];
     lc = true;
   } else {
     msgbox.className = "bad";
-    msg.innerHTML = "Incorrect... The answer was <b>" + Elements[eidx].Name + "</b>";
+    msg.innerHTML = msgLocal[window.lang][1] + Elements[eidx].Name + "</b>";
     lc = false;
   }
 }

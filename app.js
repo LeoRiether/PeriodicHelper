@@ -28,7 +28,7 @@ function validate(){
     lc = true;
   } else {
     msgbox.className = "bad";
-    msg.innerHTML = msgLocal[window.lang][1] + Elements[eidx].Name + "</b>";
+    msg.innerHTML = msgLocal[window.lang][1] + Elements[eidx]['Name-'+window.lang] + "</b>";
     lc = false;
   }
 }

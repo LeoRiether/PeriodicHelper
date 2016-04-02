@@ -22,7 +22,7 @@ var
   }
 ;
 
-var setlang = window.location.search.match(/setlang=(.*)/);
+var setlang = window.location.hash.match(/setlang=(.*)/);
 if (setlang) {
   localStorage.setItem('lang', setlang[1]);
 }

@@ -30,7 +30,8 @@ var lang = (function () {
 })();
 
 [].forEach.call($$('[string]'), function (e) {
-  e.textContent = strings[e.attributes.string][lang];
+  console.log(e.getAttribute('string'), lang, strings[e.getAttribute('string')]);
+  e.textContent = strings[e.getAttribute('string')][lang];
 });
 
 window.strings = strings;

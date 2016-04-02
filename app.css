@@ -151,3 +151,10 @@ body {
 .answbtn:hover {
   background: #275133;
 }
+
+.lang-select {
+  background: #fff;
+  border: 0;
+  border-bottom: 2px solid #f0f0f0;
+  padding: 4px;
+}

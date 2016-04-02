@@ -22,7 +22,7 @@ var
 ;
 
 function validate(){
-  if(answtxt.value.toLowerCase() == Elements[eidx].Name.toLowerCase()) {
+  if(answtxt.value.toLowerCase() == Elements[eidx]['Name-'+window.lang].toLowerCase()) {
     msgbox.className = "ok";
     msg.innerHTML = msgLocal[window.lang][1];
     lc = true;
